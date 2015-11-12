@@ -1,8 +1,12 @@
 module DaimonNews
-  module Extension
+  class Extension
     class << self
       def registered(app)
-        # TODO
+        yield config if block_given?
+      end
+
+      def config
+        @config ||= DaimonNews::Config.new
       end
     end
   end

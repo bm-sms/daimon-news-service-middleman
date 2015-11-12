@@ -71,6 +71,8 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
+# XXX middleman のサブコマンドを実行する際にはこのブロックが評価されない…
 activate :daimon_news do |config|
-  # TODO
+  config.service_url   = 'http://localhost:3000'
+  config.service_token = '1'
 end
