@@ -12,6 +12,10 @@ configure :build do
   # activate :relative_assets
 end
 
+data.posts.each do |(id, post)|
+  proxy "/posts/#{id}.html", 'post.html', locals: {post: post}
+end
+
 # XXX middleman のサブコマンドを実行する際にはこのブロックが評価されない…
 activate :daimon_news do |config|
   config.service_url   = 'http://localhost:3000'
