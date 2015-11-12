@@ -1,3 +1,8 @@
+PATH
+  remote: ./daimon_news
+  specs:
+    daimon_news (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -129,6 +134,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  daimon_news!
   middleman (~> 3.4.0)
   middleman-livereload (~> 3.1.0)
 
