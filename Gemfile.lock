@@ -2,6 +2,7 @@ PATH
   remote: ./daimon_news
   specs:
     daimon_news (0.1.0)
+      middleman (~> 3.0)
 
 GEM
   remote: https://rubygems.org/
