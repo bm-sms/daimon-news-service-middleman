@@ -1,5 +1,9 @@
-require "daimon_news/version"
+require 'daimon_news/version'
 
 module DaimonNews
-  # Your code goes here...
+  autoload :Extension, 'daimon_news/extension'
+end
+
+Middleman::Extensions.register :daimon_news do
+  ::DaimonNews::Extension
 end
